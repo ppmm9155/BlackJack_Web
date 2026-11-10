@@ -1,0 +1,183 @@
+/* 전체 배경이랑 글자 */
+body{
+	margin: 0;
+	padding: 0 0 20px;
+	background-color: #153f33;
+	color: #edf5ef;
+	font-family: "맑은 고딕", 돋움, arial;
+	font-size: 14px;
+}
+
+/* 제목이랑 메뉴 */
+header.container{
+	margin: 10px auto 0;
+	padding: 15px 20px;
+}
+
+header h1{
+	margin: 0;
+	color: #f3d797;
+	font-size: 28px;
+}
+
+/* 게임 화면 */
+section.container{
+	padding: 8px 20px;
+	background-color: #1b5644;
+}
+
+section h2, section h3{
+	margin: 6px 0;
+	font-size: 18px;
+}
+
+section h2{
+	color: #f3d797;
+}
+
+section p{
+	margin: 4px 0;
+}
+
+/* 점수 숫자 크게 */
+#dealer_score, #player_score{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* 카드 크기랑 간격 */
+#dealer_cards, #player_cards{
+	margin-bottom: 8px;
+}
+
+#dealer_cards img, #player_cards img{
+	width: 72px;
+	height: auto;
+	margin: 4px;
+}
+
+/* 카드 없을때 자리 남기기 */
+#dealer_cards p, #player_cards p{
+	height: 100px;
+	margin: 0;
+	padding: 35px 0;
+}
+
+/* 라운드랑 결과 한줄로 */
+#game_info{
+	background-color: #153f33;
+}
+
+#game_info h3, #game_info p{
+	display: inline;
+	margin: 0 10px;
+}
+
+/* 포인트 */
+#points_info .col-sm-6{
+	float: left;
+	width: 50%;
+}
+
+#total_points, #round_points{
+	color: #f3d797;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#points_info .form-group{
+	margin: 10px 0 0;
+}
+
+#point_input{
+	text-align: center;
+}
+
+/* 조작 버튼이랑 종료 안내 */
+#game_controls .btn{
+	margin: 2px;
+	padding: 8px 16px;
+}
+
+#game_message{
+	color: #ffdbbd;
+	line-height: 150%;
+}
+
+/* 기록 팝업 글자색 */
+#records_modal .modal-content{
+	color: #263b32;
+}
+
+/* 표 제목이랑 카드칸 배경 */
+#records_modal .modal-header, #records_modal th, #records_body .record_hand{
+	background-color: #e8efeb;
+}
+
+#records_modal th, #records_body td{
+	text-align: center;
+}
+
+/* 기록 카드 테두리 */
+#records_body img{
+	width: 35px;
+	height: auto;
+	margin: 2px;
+	border: 1px solid #9baa9f;
+}
+
+/* 승리랑 획득 포인트 */
+.record_green, #points_gained{
+	color: #237044;
+	font-weight: bold;
+}
+
+/* 패배랑 차감 포인트 */
+.record_red, #points_lost{
+	color: #b33232;
+	font-weight: bold;
+}
+
+/* 무승부랑 0포인트 */
+.record_gray{
+	color: #666666;
+	font-weight: bold;
+}
+
+/* 게임 방법 페이지 */
+#rules_page{
+	padding: 15px 20px;
+	background-color: #1b5644;
+}
+
+#rules_page section{
+	margin: 0 0 24px;
+}
+
+#rules_page h2{
+	margin: 0 0 10px;
+	color: #f3d797;
+	font-size: 20px;
+}
+
+#rules_page p, #rules_page li{
+	line-height: 150%;
+}
+
+/* 카드 예시 */
+#rules_page .rules_example{
+	padding: 10px;
+	text-align: center;
+}
+
+#rules_page img{
+	width: 64px;
+	height: auto;
+	margin: 3px;
+}
+
+/* 포인트 안내 표 */
+#rules_page .table{
+	background-color: #e8efeb;
+	color: #263b32;
+}

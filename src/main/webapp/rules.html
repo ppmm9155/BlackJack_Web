@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>게임 방법</title>
+</head>
+<body>
+	<header class="container">
+		<h1>게임 방법</h1>
+		<p>21을 넘지 않고 딜러보다 점수가 높으면 승리합니다.</p>
+		<p>게임은 원래 탭에서 계속할 수 있습니다.</p>
+	</header>
+
+	<main class="container" id="rules_page">
+		<!-- 게임 진행 -->
+		<section>
+			<h2>1. 게임 진행</h2>
+			<ol>
+				<li>보유 포인트 안에서 1 이상의 정수를 입력하고 <strong>게임 시작</strong>을 누릅니다.</li>
+				<li>카드는 2장씩 받고, 딜러 카드 한 장과 점수는 숨겨집니다.</li>
+				<li><strong>Hit</strong>은 한 장 더 받기, <strong>Stand</strong>는 그만 받고 딜러 차례로 넘기기입니다.</li>
+				<li>딜러는 숨긴 카드를 공개하고 16점 이하면 Hit, 17점 이상이면 멈춥니다.</li>
+			</ol>
+			<p>내가 먼저 21점을 넘으면 패배하고, 딜러가 넘으면 내가 승리합니다. 점수가 같으면 무승부입니다.</p>
+		</section>
+
+		<!-- 카드 점수 -->
+		<section>
+			<h2>2. 카드 점수</h2>
+			<ul>
+				<li>2~10은 숫자 그대로, J, Q, K는 10점입니다.</li>
+				<li>A는 11점이고, 합계가 21을 넘으면 1점으로 바꿉니다.</li>
+			</ul>
+			<div class="row">
+				<div class="col-sm-4 rules_example">
+					<h3>블랙잭</h3>
+					<img src="cards/ace_of_spades.png" alt="스페이드 A">
+					<img src="cards/king_of_hearts.png" alt="하트 K">
+					<p>A + K = <strong>21점</strong></p>
+				</div>
+				<div class="col-sm-4 rules_example">
+					<h3>일반 점수</h3>
+					<img src="cards/10_of_clubs.png" alt="클로버 10">
+					<img src="cards/8_of_hearts.png" alt="하트 8">
+					<p>10 + 8 = <strong>18점</strong></p>
+				</div>
+				<div class="col-sm-4 rules_example">
+					<h3>버스트</h3>
+					<img src="cards/10_of_diamonds.png" alt="다이아몬드 10">
+					<img src="cards/8_of_spades.png" alt="스페이드 8">
+					<img src="cards/5_of_clubs.png" alt="클로버 5">
+					<p>10 + 8 + 5 = <strong>23점</strong></p>
+				</div>
+			</div>
+			<p>처음 두 장으로 21점이면 블랙잭으로 바로 승리합니다. 양쪽 다 블랙잭이면 무승부입니다.</p>
+			<p>세 장 이상으로 만든 21점은 일반 21점입니다.</p>
+		</section>
+
+		<!-- 포인트랑 기록 -->
+		<section>
+			<h2>3. 포인트와 기록</h2>
+			<p>처음에는 10000 P로 시작하고, 입력한 포인트는 게임 시작 시 차감됩니다.</p>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>결과</th>
+						<th>100 P로 시작했을 때 돌려받는 포인트</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>일반 승리</td>
+						<td>200 P (이익 +100 P)</td>
+					</tr>
+					<tr>
+						<td>블랙잭 승리</td>
+						<td>250 P (이익 +150 P)</td>
+					</tr>
+					<tr>
+						<td>패배</td>
+						<td>0 P (손실 -100 P)</td>
+					</tr>
+					<tr>
+						<td>무승부</td>
+						<td>100 P (변동 없음)</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>블랙잭 이익은 1.5배이고, 소수점은 반올림합니다.</p>
+			<ul>
+				<li><strong>다음 라운드</strong>는 새 덱 52장으로 시작하고, 포인트와 기록은 유지됩니다.</li>
+				<li><strong>기록 보기</strong>에서 카드, 점수, 결과와 실제 포인트 증감을 볼 수 있습니다.</li>
+				<li>보유 포인트가 0이면 종료됩니다.</li>
+				<li>F5를 누르면 기록과 라운드가 초기화되고 다시 10000 P로 시작합니다.</li>
+			</ul>
+		</section>
+		<a href="#" class="btn btn-default">맨 위로</a>
+	</main>
+</body>
+</html>

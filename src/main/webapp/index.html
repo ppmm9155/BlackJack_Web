@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+
+<!-- 모바일 화면 대응 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- 게임 화면 CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+<title>Black Jack</title>
+</head>
+<body>
+	<!-- 상단 메뉴 : 게임 제목, 게임방법, 기록 -->
+	<header class="container">
+    	<div class="row">
+        	<div class="col-sm-6">
+            	<h1>BlackJack</h1>
+       		 </div>
+
+        	<nav class="col-sm-6 text-right">
+				<!-- 게임 유지하고 방법은 새 탭에서 보기 -->
+            	<a href="rules.html" target="_blank" class="btn btn-default">게임 방법</a>
+            	<button type="button" id="records_btn" class="btn btn-primary"
+						data-toggle="modal" data-target="#records_modal">
+            	기록 보기
+            	</button>
+        	</nav>
+    	</div>
+	</header>
+
+	
+	<!-- 딜러 -->
+	<section class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2>dealer</h2>
+				
+				<!-- 딜러 카드 -->
+				<div id="dealer_cards">
+					<p>게임을 시작하면 카드가 표시됩니다.</p>	 	
+					<!-- <img src="cards/back.png"> -->
+				</div>
+				
+				<!-- 딜러 점수 -->
+				<p>
+					딜러 점수:
+					<span id="dealer_score">?</span>
+				</p>
+				
+			</div>
+			
+		</div>
+	</section>
+	
+	
+<!-- 게임 정보 -->
+<section class="container" id="game_info">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+
+            <h3>게임 정보</h3>
+
+            <p>
+                라운드 :
+                <span id="round_count">0</span>
+            </p>
+
+            <p>
+                게임 결과 :
+                <span id="game_result">-</span>
+            </p>
+
+        </div>
+    </div>
+</section>
+
+	
+<!-- 플레이어 -->
+<section class="container">
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			<h2>player</h2>
+				
+			<!-- 플레이어 카드 -->
+			<div id="player_cards">
+				<p>게임을 시작하면 카드가 표시됩니다.</p>	 	
+				<!-- <img src="cards/back.png"> -->
+			</div>
+				
+			<!-- 플레이어 점수 -->
+			<p>
+				플레이어 점수:
+				<span id="player_score">?</span>
+			</p>
+				
+		</div>
+			
+	</div>
+</section>
+
+
+
+<!-- 포인트 -->
+<section class="container" id="points_info">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3>포인트</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 text-center">
+            <p>보유 포인트</p>
+            <span id="total_points">10000</span> p
+        </div>
+
+        <div class="col-sm-6 text-center">
+            <p>라운드 포인트</p>
+            <span id="round_points">0</span> P
+        </div>
+    </div>
+	
+    <!-- 포인트 입력 -->
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4 text-center">
+            <div class="form-group">
+                <label for="point_input">라운드 포인트 설정</label>
+                <input type="number"
+                       id="point_input"
+                       class="form-control"
+                       min="1"
+                       max="10000"
+                       step="1"
+                       placeholder="포인트 입력">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+	
+<!-- 게임 조작 -->
+<section class="container" id="game_controls">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+
+            <h3>게임 조작</h3>
+
+            <button type="button" id="start_game"
+                    class="btn btn-primary">
+                게임 시작
+            </button>
+
+            <button type="button" id="hit_btn"
+                    class="btn btn-success" disabled>
+                Hit
+            </button>
+
+            <button type="button" id="stand_btn"
+                    class="btn btn-warning" disabled>
+                Stand
+            </button>
+
+            <!-- 포인트 없으면 종료 안내 -->
+            <p id="game_message" class="text-danger"></p>
+
+        </div>
+    </div>
+</section>
+
+	
+	<footer>
+	
+	</footer>
+	<!-- 외부 Modal HTML을 불러올 위치 -->
+	<div id="modal_container"></div>
+	
+	
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Bootstrap 3.3.6 JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+	
+	
+</body>
+
+</html>

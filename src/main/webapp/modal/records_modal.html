@@ -1,0 +1,75 @@
+<!-- 게임 기록 Modal -->
+<div class="modal fade" id="records_modal"
+     tabindex="-1" role="dialog"
+     aria-labelledby="records_title">
+
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <!-- 제목 -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal"
+                        aria-label="닫기">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <h4 class="modal-title" id="records_title">
+                    게임 기록
+                </h4>
+            </div>
+
+            
+<!-- 기록 내용 -->
+<div class="modal-body">
+
+    <!-- 누적 통계 -->
+    <p>
+        총 횟수 : <span id="record_total">0</span> |
+        승리 : <span id="record_wins">0</span> |
+        패배 : <span id="record_losses">0</span> |
+        무승부 : <span id="record_draws">0</span>
+    </p>
+
+    <!-- 포인트 통계 -->
+    <p>
+        획득 포인트 : <span id="points_gained">0</span> P |
+        차감 포인트 : <span id="points_lost">0</span> P
+    </p>
+
+    <!-- 기록 테이블 -->
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>회차</th>
+                    <th>플레이어</th>
+                    <th>딜러</th>
+                    <th>결과</th>
+                    <th>포인트 변동</th>
+                </tr>
+            </thead>
+
+            <tbody id="records_body">
+                <tr>
+                    <td colspan="5" class="text-center">아직 완료한 게임이 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+            <!-- 닫기 -->
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal">
+                    닫기
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
